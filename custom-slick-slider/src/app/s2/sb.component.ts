@@ -8,18 +8,18 @@ import { interval } from 'rxjs';
 })
 
 export class SBComponent {
-  num=0;
+  // num=0;
   images:any;
   images2:any;
   images3:any;
   slideIndex:any;
   initialIndex:any;
 
-  nexta:any;
-  preva:any;
-  slides:any;
+  // nexta:any;
+  // preva:any;
+  // slides:any;
 
-  showAllImages = false;
+  // showAllImages = false;
   constructor() {
     this.slideIndex=5;
     this.initialIndex=0;
@@ -70,26 +70,26 @@ export class SBComponent {
     /** Because NEXT Click eVENT lISTENED so Indexes will Increament and Decrement. */
     this.slideIndex++;
     this.initialIndex++;
-      console.log('NEXT: ');
-            console.log('initial: '+this.initialIndex);
-            console.log('slick: '+ this.slideIndex);
-            console.log('length: '+(this.images.length-1));
+      // console.log('NEXT: ');
+      //       console.log('initial: '+this.initialIndex);
+      //       console.log('slick: '+ this.slideIndex);
+      //       console.log('length: '+(this.images.length-1));
 
     this.disableNext();
         /** */
       var non_slide = document.getElementById((this.initialIndex-1)+'-img');
       (<any>non_slide).style.display = 'none';
-                       console.log(non_slide);
+                      //  console.log(non_slide);
 
                   /** */
       var flex_slide = document.getElementById((this.slideIndex) + '-img');
       (<any>flex_slide).style.display = 'flex';
-                       console.log(flex_slide);
-                       console.log('slides');
-          for(let i=0;i<this.images.length;i++) {
-            var slide = document.getElementById(i + '-img');
-            console.log(slide);
-          }
+                      //  console.log(flex_slide);
+                      //  console.log('slides');
+          // for(let i=0;i<this.images.length;i++) {
+          //   var slide = document.getElementById(i + '-img');
+          //   console.log(slide);
+          // }
 
     this.enablePrevious();
 
@@ -99,26 +99,26 @@ export class SBComponent {
     this.slideIndex--;
     this.initialIndex--;
 
-    console.log('PREVIOUS: ');
-    console.log('initial: '+this.initialIndex);
-    console.log('slick: '+ this.slideIndex);
-    console.log('length: '+(this.images.length-1));
+    // console.log('PREVIOUS: ');
+    // console.log('initial: '+this.initialIndex);
+    // console.log('slick: '+ this.slideIndex);
+    // console.log('length: '+(this.images.length-1));
 
     this.enableNext();
       /** */
       var non_slide = document.getElementById((this.initialIndex)+'-img');
       (<any>non_slide).style.display = 'flex';
-                       console.log(non_slide);
+                      //  console.log(non_slide);
 
                   /** */
       var flex_slide = document.getElementById((this.slideIndex+1) + '-img');
       (<any>flex_slide).style.display = 'none';
-                       console.log(flex_slide);
-                       console.log('slides');
-          for(let i=0;i<this.images.length;i++) {
-            var slide = document.getElementById(i + '-img');
-            console.log(slide);
-          }
+                      //  console.log(flex_slide);
+                      //  console.log('slides');
+          // for(let i=0;i<this.images.length;i++) {
+          //   var slide = document.getElementById(i + '-img');
+          //   console.log(slide);
+          // }
 
     this.disablePrevious();
   }
@@ -128,16 +128,16 @@ export class SBComponent {
     if(this.slideIndex == 5 || this.initialIndex == 0) {
       var prev_sib = document.getElementById(0+'-img').previousSibling.previousSibling;
                         // console.log(prev_sib);
-      (<any>prev_sib).classList.add('disable_btn');
-                        console.log(prev_sib);
+      // (<any>prev_sib).classList.add('disable_btn');
+      //                   console.log(prev_sib);
     }
   }
   enablePrevious() {
     if(this.initialIndex != 0) {
       document.getElementById('pv-btn').classList.remove('disable_btn');
-      var prev_slide = document.getElementById('pv-btn');
-                console.log("prev-Slide");
-                console.log(prev_slide);
+      // var prev_slide = document.getElementById('pv-btn');
+      //           console.log("prev-Slide");
+      //           console.log(prev_slide);
     }
   }
 
@@ -145,9 +145,9 @@ export class SBComponent {
       /** NOTE: fOR dIABLE BUTTON */
     if(this.slideIndex == this.images.length-1) {
       document.getElementById('nxt-btn').classList.add('disable_btn');
-      var next_slide = document.getElementById('nxt-btn');
-        console.log("next-Slide");
-        console.log(next_slide);
+      // var next_slide = document.getElementById('nxt-btn');
+      //   console.log("next-Slide");
+      //   console.log(next_slide);
     }
   }
   enableNext() {
