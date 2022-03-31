@@ -1,0 +1,68 @@
+<!-- 1st Case -->
+<div class="Container">
+  <h2> More Than 6 Slides</h2>
+  <div class="container">
+    <div class="race_list">
+      <ul class="race-menu">
+        <!--IMPORTANT ID 2--><div id="pv-btn" class='nav-btn prev-slide disable_btn' [style.display]="(images.length < 6 || images.length == 6)? 'none': ''"><i class='date_slider_left_arrow' (click)="previous()"></i></div>
+          <li *ngFor="let img of images ; let i=index" class="slide" id="{{i}}-img" ><!--IMPORTANT ID 1-->
+              <div class="race_item_link_wrap">
+                  <a>
+                    <img id="slider" [src]="img" width="130px" height="130px"/>
+                    <span >Result {{i}}</span>
+                    <i></i>
+                  </a>
+              </div>
+          </li>
+        <!--IMPORTANT ID 3--><div id="nxt-btn" class='nav-btn next-slide' [style.display]="(images.length < 6 || images.length == 6)? 'none': ''"><i class='date_slider_right_arrow' (click)="next()"></i></div>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- 2nd Case-->
+
+<!-- <h2> 6 Slides</h2>
+<div class="container">
+  <div class="race_list">
+    <ul class="race-menu"> -->
+      <!--IMPORTANT ID 2-->
+      <!-- <div id="pv-btn2" class='nav-btn prev-slide disable_btn' [style.display]="(images2.length < 6 || images2.length == 6)? 'none': ''"><i class='date_slider_left_arrow' (click)="previous2()"></i></div>
+        <li *ngFor="let img of images2 ; let i=index" class="slide" id="{{i}}-img2" > -->
+          <!--IMPORTANT ID 1-->
+            <!-- <div class="race_item_link_wrap">
+                <a>
+                  <img id="slider" [src]="img" width="50px" height="50px"/>
+                  <span >Result {{i}}</span>
+                  <i></i>
+                </a>
+            </div>
+        </li> -->
+      <!--IMPORTANT ID 3-->
+      <!-- <div id="nxt-btn2" class='nav-btn next-slide' [style.display]="(images2.length < 6 || images2.length == 6)? 'none': ''"><i class='date_slider_right_arrow' (click)="next2()"></i></div>
+    </ul>
+  </div>
+</div> -->
+
+<!-- 3rd Case -->
+
+<!-- <h2> More Than 6 Slides</h2>
+<div class="container">
+  <div class="race_list">
+    <ul class="race-menu"> -->
+      <!--IMPORTANT ID 2-->
+      <!-- <div id="pv-btn3" class='nav-btn prev-slide disable_btn' [style.display]="(images3.length < 6 || images3.length == 6)? 'none': ''"><i class='date_slider_left_arrow' (click)="previous3()"></i></div>
+        <li *ngFor="let img of images3 ; let i=index" class="slide" id="{{i}}-img3" > -->
+          <!--IMPORTANT ID 1-->
+            <!-- <div class="race_item_link_wrap">
+                <a>
+                  <img id="slider" [src]="img" width="50px" height="50px"/>
+                  <span >Result {{i}}</span>
+                  <i></i>
+                </a>
+            </div>
+        </li> -->
+      <!--IMPORTANT ID 3-->
+      <!-- <div id="nxt-btn3" class='nav-btn next-slide' [style.display]="(images3.length < 6 || images3.length == 6)? 'none': ''"><i class='date_slider_right_arrow' (click)="next3()"></i></div>
+    </ul>
+  </div>
+</div> -->
